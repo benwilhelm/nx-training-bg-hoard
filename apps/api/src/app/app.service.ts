@@ -1,5 +1,6 @@
 import { Game as IGame } from '@bg-hoard/util-interface';
 import { Injectable } from '@nestjs/common';
+
 const games: IGame[] = [
   {
     id: 'settlers-in-the-can',
