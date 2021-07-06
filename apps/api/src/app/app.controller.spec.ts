@@ -13,10 +13,27 @@ describe('AppController', () => {
     }).compile();
   });
 
-  describe('getData', () => {
-    it('should return "Welcome to api!"', () => {
+  describe('getAllGames', () => {
+    it('should return all games', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.getData()).toEqual({ message: 'Welcome to api!' });
+      expect(appController.getAllGames().map((g) => g.id)).toEqual([
+        'settlers-in-the-can',
+        'chess-pie',
+        'purrfection',
+      ]);
+    });
+  });
+
+  describe('getGame', () => {
+    it('should return game by id', () => {
+      const appController = app.get<AppController>(AppController);
+      expect(appController.getGame('settlers-in-the-can')).toEqual(
+        expect.objectContaining({
+          id: 'settlers-in-the-can',
+          name: 'Settlers in the Can',
+          image: '/assets/beans.png', // 'https://media.giphy.com/media/xUNda3pLJEsg4Nedji/giphy.gif',
+        })
+      );
     });
   });
 });
