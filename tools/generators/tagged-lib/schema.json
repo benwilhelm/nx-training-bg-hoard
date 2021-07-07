@@ -18,9 +18,15 @@
         "message": "What type of lib is this?",
         "type": "list",
         "items": [
-          { "value": "util" },
-          { "value": "ui" },
-          { "value": "feature" }
+          {
+            "value": "util"
+          },
+          {
+            "value": "ui"
+          },
+          {
+            "value": "feature"
+          }
         ]
       },
       "enum": ["util", "ui", "feature"]
@@ -32,9 +38,22 @@
         "message": "Which directory should the lib live in?",
         "type": "list",
         "items": [
-          { "value": "store" },
-          { "value": "api" },
-          { "value": "shared" }
+          {
+            "value": "api",
+            "label": "api"
+          },
+          {
+            "value": "store",
+            "label": "store"
+          },
+          {
+            "value": "new",
+            "label": "new"
+          },
+          {
+            "value": "shared",
+            "label": "shared"
+          }
         ],
         "enum": ["store", "api", "shared"]
       }

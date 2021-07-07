@@ -39,11 +39,8 @@
     "api-util-notifications": {
       "tags": ["type:util", "scope:api"]
     },
-    "shared-feature-another": {
-      "tags": ["type:feature", "scope:shared"]
-    },
     "store": {
-      "tags": ["scope:store", "type:app"]
+      "tags": ["scope:store", "scope:new", "type:app"]
     },
     "store-e2e": {
       "tags": ["scope:store", "type:e2e"],
