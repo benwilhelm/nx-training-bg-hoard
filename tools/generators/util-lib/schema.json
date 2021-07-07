@@ -1,0 +1,29 @@
+{
+  "cli": "nx",
+  "id": "util-lib",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "directory": {
+      "type": "string",
+      "description": "The directory to place the lib into",
+      "x-prompt": {
+        "message": "Which directory should the lib live in?",
+        "type": "list",
+        "items": [
+          { "value": "store" },
+          { "value": "api" },
+          { "value": "shared" }
+        ]
+      }
+    }
+  },
+  "required": ["name", "directory"]
+}
