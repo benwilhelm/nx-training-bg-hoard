@@ -11,6 +11,20 @@
         "index": 0
       }
     },
+    "type": {
+      "type": "string",
+      "description": "What type of lib is this?",
+      "x-prompt": {
+        "message": "What type of lib is this?",
+        "type": "list",
+        "items": [
+          { "value": "util" },
+          { "value": "ui" },
+          { "value": "feature" }
+        ]
+      },
+      "enum": ["util", "ui", "feature"]
+    },
     "directory": {
       "type": "string",
       "description": "The directory to place the lib into",
@@ -21,7 +35,8 @@
           { "value": "store" },
           { "value": "api" },
           { "value": "shared" }
-        ]
+        ],
+        "enum": ["store", "api", "shared"]
       }
     }
   },

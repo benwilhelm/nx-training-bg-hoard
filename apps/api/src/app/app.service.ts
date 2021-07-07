@@ -1,5 +1,6 @@
 import { Game as IGame } from '@bg-hoard/util-interface';
 import { Injectable } from '@nestjs/common';
+import { sendNotification } from '@bg-hoard/api/util-notifications';
 
 const games: IGame[] = [
   {
