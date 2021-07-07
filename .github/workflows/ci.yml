@@ -9,5 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: bahmutov/npm-install@v1
-      - run: yarn run nx affected:lint --parallel
-      - run: yarn run nx affected:test --parallel
+      - run: yarn run nx affected:lint --parallel --base=origin/master
+      - run: yarn run nx affected:test --parallel --base=origin/master
